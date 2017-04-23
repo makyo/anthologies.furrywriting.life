@@ -1,0 +1,134 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Inknut+Antiqua|Playfair+Display:400,400i,700,700i');
+
+$body: "Gentium Book Basic", "Georgia", "Times New Roman", serif;
+$title: "Inknut Antiqua", "Helvetica Neue", sans-serif;
+$display: "Playfair Display", "Palatino", "Times New Roman", serif;
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%) no-repeat;
+    border: none;
+    padding: 0 0 120px 0;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+    font-family: $body;
+    background-color: #1f183a;
+    color: #eef;
+}
+
+h1, h2, h3, h4, h5, h6, .titlefont {
+    font-family: $title;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+
+    em {
+        font-family: $display;
+        font-weight: 700;
+        font-size: 36pt;
+    }
+
+    h1 {
+        .kern {
+            margin-left: -3pt;
+        }
+
+        .star {
+            margin: 0 0.5rem;
+        }
+    }
+
+    h2 em {
+        font-weight: 300;
+        font-size: 15pt;
+    }
+}
+
+main {
+    line-height: 1.6;
+    font-size: 13pt;
+}
+
+blockquote {
+    float:left;
+    max-width: 40%;
+    margin: 0 0.75rem 0.5rem 0;
+    padding: 0.75rem;
+    line-height: 1.5;
+    font-size: 12pt;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    .quote {
+        font-family: $display;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    .attribution {
+        margin-bottom: 0;
+    }
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+hr {
+    width: 0;
+    border: none;
+
+    &:before {
+        content: "✶";
+    }
+}
+
+table {
+    margin: 0 auto;
+
+    thead {
+        font-family: $title;
+        text-align: center;
+    }
+
+    tbody {
+        tr {
+            td {
+                font-family: $display;
+                font-weight: 400;
+                margin: 0;
+                padding: 0 0.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                &:first-of-type {
+                    text-align: right;
+                }
+            }
+
+            &:last-of-type td {
+                border-bottom: none;
+            }
+        }
+    }
+}
