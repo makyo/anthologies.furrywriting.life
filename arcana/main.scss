@@ -24,7 +24,7 @@ body {
     padding: 0 0 120px 0;
     margin: 0;
     min-height: 100%;
-    position: relative;
+    width: 100%;
     font-family: $body;
     background-color: #1f183a;
     color: #eef;
@@ -32,7 +32,7 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 1rem;
 }
 
 h1, h2, h3, h4, h5, h6, .titlefont {
@@ -83,7 +83,9 @@ header, footer {
         font-size: 15pt;
     }
 }
-
+header {
+    padding-top: 1rem;
+}
 footer {
     font-size: 10pt;
 }
@@ -128,6 +130,10 @@ hr {
 table {
     margin: 0 auto;
 
+    * {
+        vertical-align: top;
+    }
+
     thead {
         font-family: $title;
         text-align: center;
@@ -138,8 +144,7 @@ table {
             td {
                 font-family: $display;
                 font-weight: 400;
-                margin: 0;
-                padding: 0 0.5rem;
+                padding: 0.25rem 0.5rem;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
                 &:first-of-type {
@@ -154,12 +159,23 @@ table {
     }
 }
 
+@media only screen and (max-width: 500px) {
+    table {
+        font-size: 10pt;
+    }
+}
 @media only screen and (min-width: 900px) {
     .pull-left {
         float:left;
         max-width: 40%;
         margin: 0 0.75rem 0.5rem 0;
         margin-left: -50px;
+    }
+    .pull-right {
+        float: right;
+        max-width: 40%;
+        margin: 0 0 0.5rem 0.75rem;
+        margin-right: -50px;
     }
 
     .wrapper {
