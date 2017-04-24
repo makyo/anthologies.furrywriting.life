@@ -30,6 +30,11 @@ body {
     color: #eef;
 }
 
+.wrapper {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
 h1, h2, h3, h4, h5, h6, .titlefont {
     font-family: $title;
 }
@@ -37,8 +42,25 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-header {
+a {
+    &, &:active, &:hover {
+        color: #bbc;
+        text-decoration: none;
+    }
+    &:hover {
+        text-decoration:underline;
+    }
+    &:visited {
+        color: #aab;
+    }
+}
+
+header, footer {
+    max-width: 900px;
     text-align: center;
+    p {
+        line-height: 2;
+    }
 
     em {
         font-family: $display;
@@ -62,21 +84,25 @@ header {
     }
 }
 
+footer {
+    font-size: 10pt;
+}
+
 main {
     line-height: 1.6;
     font-size: 13pt;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 blockquote {
-    float:left;
-    max-width: 40%;
-    margin: 0 0.75rem 0.5rem 0;
     padding: 0.75rem;
     line-height: 1.5;
     font-size: 12pt;
     text-align: justify;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid transparent;
+    background: linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.01));
+    border: 0px solid transparent;
     border-radius: 5px;
 
     .quote {
@@ -88,11 +114,6 @@ blockquote {
     .attribution {
         margin-bottom: 0;
     }
-}
-
-.wrapper {
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 hr {
@@ -130,5 +151,29 @@ table {
                 border-bottom: none;
             }
         }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .pull-left {
+        float:left;
+        max-width: 40%;
+        margin: 0 0.75rem 0.5rem 0;
+        margin-left: -50px;
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+}
+
+@media print {
+    * {
+        color: black;
+    }
+
+    a, a:visited {
+        color: black;
+        text-decoration: none;
     }
 }
