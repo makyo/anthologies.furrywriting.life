@@ -41,7 +41,7 @@ body {
 h1, h2, h3, h4, h5, h6, .titlefont {
     font-family: $title;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .center {
     text-align: center;
 }
 
@@ -68,10 +68,19 @@ header, footer {
     em {
         font-family: $display;
         font-weight: 700;
-        font-size: 36pt;
     }
 
     h1 {
+        margin-bottom: 0;
+
+        &:first-letter {
+            font-size: 44pt;
+        }
+
+        em {
+            font-size: 36pt;
+        }
+
         .kern {
             margin-left: -3pt;
         }
@@ -81,7 +90,8 @@ header, footer {
         }
     }
 
-    h2 em {
+    h2 {
+        font-family: $display;
         font-weight: 300;
         font-size: 15pt;
     }
