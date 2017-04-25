@@ -19,15 +19,14 @@ html {
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%) no-repeat;
+    background-color: #1f183a;
+    color: #eef;
     border: none;
-    padding: 0 0 120px 0;
+    padding: 0;
     margin: 0;
     min-height: 100%;
     width: 100%;
     font-family: $body;
-    background-color: #1f183a;
-    color: #eef;
 }
 
 .wrapper {
@@ -36,6 +35,23 @@ body {
     img {
         max-width: 100%;
     }
+}
+
+.black {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    padding: 1rem 0;
+}
+.gradient {
+    background: linear-gradient(black, transparent 25%) no-repeat;
+    margin: 0;
+    padding: 1rem 0;
+}
+.reverse-gradient {
+    background: linear-gradient(transparent, black) no-repeat;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 h1, h2, h3, h4, h5, h6, .titlefont {
@@ -101,6 +117,7 @@ header {
 }
 footer {
     font-size: 10pt;
+    min-height: 150px;
 }
 
 main {
@@ -109,6 +126,10 @@ main {
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
+
+    .lead {
+        font-size: 15pt;
+    }
 }
 
 blockquote {
