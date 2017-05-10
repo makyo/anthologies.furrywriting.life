@@ -1,0 +1,80 @@
+---
+---
+
+.flip-switch {
+    text-align: center;
+}
+
+.flippable {
+    display: flex;
+    vertical-align: top;
+    transition: transform 2s ease;
+
+    .col {
+        margin: 0;
+        border: 0;
+        flex-grow: 1;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .colB {
+        transform: rotate(180deg);
+    }
+}
+
+.flipped .flippable {
+    transform: rotate(180deg);
+    transition: transform 2s ease;
+}
+
+.flipper {
+    margin-bottom: 1rem;
+    vertical-align: middle;
+    background-color: #def;
+    border: 2px solid #99f;
+    border-right-color: #88e;
+    border-bottom-color: #88e;
+    border-radius: 4px;
+    height: 6rem;
+    width: 6rem;
+
+    .flip-arrow {
+        display: block;
+        font-size: 3rem;
+        transform: rotate(0deg);
+        transition: transform 2s ease;
+    }
+}
+
+.flipped .flip-arrow {
+    transform: rotate(180deg);
+    transition: transform 2s ease;
+}
+
+@media only screen and (max-width: 960px) {
+    .flip-container {
+        overflow: hidden;
+    }
+
+    .flipped .flippable {
+        transition: transform 1s ease;
+    }
+
+    .flippable {
+        transition: transform 1s ease;
+        flex-flow: row wrap;
+        width: 100%;
+
+        .col {
+            flex-grow: 0;
+            width: 100%;
+            margin: auto;
+            display: block;
+        }
+    }
+
+    .flip-arrow {
+        transition: transform 1s ease;
+    }
+}
