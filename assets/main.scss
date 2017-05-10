@@ -16,6 +16,24 @@ main .flex {
     }
 }
 
+
+.alert {
+    text-align: center;
+    max-width: 50%;
+    margin: 1rem auto;
+    border: 2px solid #e77;
+    border-radius: 4px;
+    background-color: #faa;
+    color: #800;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 960px) {
+    .alert {
+        max-width: 100%;
+    }
+}
+
 @import
     "base",
     "layout",

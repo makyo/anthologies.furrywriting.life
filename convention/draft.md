@@ -3,6 +3,8 @@ layout: post
 title: Convention
 ---
 
+<div class="alert"><strong><em>Convention</em></strong> is not currently open for submissions</div>
+
 ### What
 
 *Convention* is an anthology of furries --- the people with an interest in anthropomorphics, rather than their characters --- gathering for a furry con. The stories will be of all ratings and featuring folks of all types, all of whom are attending one (fictional) convention in Austin, TX, all experiencing the same events in different ways.
