@@ -77,6 +77,9 @@ a {
 header, footer {
     max-width: 900px;
     text-align: center;
+    hr {
+        text-align: left;
+    }
     p {
         line-height: 2;
     }
@@ -154,12 +157,22 @@ blockquote {
 }
 
 hr {
-    width: 0;
     border: none;
 
     &:before {
+        margin-left: 50%;
         content: "✶";
+        color: #fff;
     }
+}
+
+.clearfix {
+    &:after, &:before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    text-align: center;
 }
 
 table {
@@ -202,13 +215,16 @@ table {
 @media only screen and (min-width: 900px) {
     .pull-left {
         float:left;
-        max-width: 40%;
+        max-width: 25% !important;
         margin: 0 0.75rem 0.5rem 0;
         margin-left: -50px;
     }
+    blockquote.pull-left {
+        max-width: 40% !important;
+    }
     .pull-right {
         float: right;
-        max-width: 40%;
+        max-width: 25% !important;
         margin: 0 0 0.5rem 0.75rem;
         margin-right: -50px;
     }
