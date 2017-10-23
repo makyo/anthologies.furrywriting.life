@@ -67,7 +67,7 @@ a {
         text-decoration: none;
     }
     &:hover {
-        text-decoration:underline;
+        text-decoration: underline;
     }
     &:visited {
         color: #aab;
@@ -177,6 +177,7 @@ hr {
 
 table {
     margin: 0 auto;
+    text-align: left;
 
     * {
         vertical-align: top;
