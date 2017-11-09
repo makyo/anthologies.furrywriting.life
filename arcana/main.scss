@@ -139,7 +139,6 @@ main {
 blockquote {
     padding: 0.75rem;
     line-height: 1.5;
-    font-size: 12pt;
     text-align: justify;
     background: linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.01));
     border: 0px solid transparent;
@@ -147,11 +146,13 @@ blockquote {
 
     .quote {
         font-family: $display;
+        font-size: 12pt;
         font-weight: 400;
         margin-top: 0;
     }
 
     .attribution {
+        font-size: 12pt;
         margin-bottom: 0;
     }
 }
